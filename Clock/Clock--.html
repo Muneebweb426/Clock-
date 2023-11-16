@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clocktime </title>
+    <style>
+        /* * {
+
+            background-color: rgba(61, 66, 69, 0.284);
+        } */
+
+        body {
+            background-color: rgba(51, 90, 90, 0.585);
+        }
+
+        #container {
+            background-color: rgba(23, 101, 113, 0.46);
+
+
+        }
+
+        .nav {
+            width: 98vw;
+            display: flex;
+            justify-content: space-between;
+            margin: 23px auto;
+
+        }
+
+        .logo {
+            font-size: 43px;
+            color: #f71000bd;
+            margin-top: 12px;
+        }
+
+        .navigation {
+            display: inline-block;
+            text-decoration: none;
+            margin: 12px;
+
+
+
+        }
+
+        .navigation ul {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+
+
+
+        .navigation,
+        ul,
+        a,
+        li {
+            list-style: none;
+            position: relative;
+            display: block;
+            font-family: Lato, sans-serif;
+            color: #d32a10;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #a52511;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+
+
+        li:hover::after {
+            color: #f71000;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        li:hover {
+            color: #f71000;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .box {
+            width: 700px;
+            height: 400px;
+            background-color: rgba(141, 72, 188, 0.585);
+            margin: 12px auto;
+
+        }
+
+        .box h2 {
+            font-size: 33px;
+            padding: 22px;
+            color: aqua;
+
+        }
+
+        .box h3 {
+            font-size: 33px;
+            padding: 22px;
+            color: rgb(28, 40, 40);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="nav">
+            <div class="logo">W3blog</div>
+            <div class="navigation">
+                <ul> <a href="">
+                        <li>Home</li>
+                    </a></ul>
+                <ul>
+                    <a href="">
+                        <li>Blog</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="">
+                        <li>Products</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="">
+                        <li>Wordoress</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="">
+                        <li>Privacy-Policy</li>
+                    </a>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <section class="box">
+        <h2>Current Time : <span id="time"></span></h2>
+        <h3>Current date : <span id="date"></span></h3>
+        <div id="alrt">
+            <h1></h1>
+        </div>
+        <div id="alr2">
+
+        </div>
+    </section>
+
+
+    <script>
+
+        setInterval(() => {
+            let b = new Date();
+            let date = b.toLocaleDateString();
+            let time = b.getHours() + ':' + b.getMinutes() + ':' + b.getSeconds();
+            document.getElementById('time').innerHTML = time
+            document.getElementById('date').innerHTML = date
+        }, 1000);
+
+            // let a = alert("welcome to this course")
+            // setTimeout
+            // setInterval(()=> { alert("This is welcome Screen by MUNEEB"); }, 9000);
+            // document.getElementById('alrt').innerHTML = '<b>Please wait, Your download will start soon!!!</b>';
+            // setTimeout(function () { document.getElementById('alrt').innerHTML = "<b>This is my first course tutorial</b>  "; }, 5000);
+            // document.getElementById('alr2').innerHTML = '<b>This is not a bold element</b> '
+            // setTimeout(() => { document.getElementById('alr2').innerHTML = '<b>This is bold element</b>' }, 2000);
+            // let a;
+            // let date;
+            // let time;
+            // setInterval(() => {
+            //     a = new Date();
+            //     date = a.toLocaleDateString();
+            //     time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            //     document.getElementById("time").innerHTML = time + " on " + date;
+            // }, 1000);
+
+
+
+    </script>
+
+</body>
+
+</html>
